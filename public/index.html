@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chat App</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="nickname-screen">
+      <div class="nickname-box">
+        <h1>💬 Chat App</h1>
+        <p>Enter your nickname to start chatting</p>
+        <input
+          id="nickname-input"
+          type="text"
+          placeholder="Your nickname..."
+          maxlength="20"
+        />
+        <button id="join-btn">Join Chat</button>
+      </div>
+    </div>
+
+    <div id="chat-screen" class="hidden">
+      <div id="sidebar">
+        <div id="sidebar-header">
+          <h2>💬 Chat App</h2>
+          <div id="online-count">0 online</div>
+        </div>
+        <div id="rooms-label">ROOMS</div>
+        <div id="rooms">
+          <div class="room active" data-room="general">💬 General</div>
+          <div class="room" data-room="random">🎲 Random</div>
+          <div class="room" data-room="gaming">🎮 Gaming</div>
+          <div class="room" data-room="music">🎵 Music</div>
+          <div class="room" data-room="coding">💻 Coding</div>
+        </div>
+        <div id="user-info">
+          <div id="user-avatar"></div>
+          <div id="user-nickname"></div>
+        </div>
+      </div>
+
+      <div id="main">
+        <div id="chat-header">
+          <div id="current-room-name">💬 General</div>
+          <div id="header-actions">
+            <input
+              id="search-input"
+              type="text"
+              placeholder="Search messages..."
+            />
+            <button id="theme-btn">🌙</button>
+          </div>
+        </div>
+        <div id="pinned-bar" class="hidden">
+          <span id="pinned-text"></span>
+          <button id="unpin-btn">✕</button>
+        </div>
+        <div id="messages"></div>
+        <div id="seen-bar"></div>
+        <div id="typing-indicator"></div>
+        <div id="input-area">
+          <button id="emoji-btn">😊</button>
+          <div id="emoji-picker" class="hidden">
+            <div id="emoji-grid"></div>
+          </div>
+          <button id="image-btn" title="Send image link">🖼️</button>
+          <input
+            id="message-input"
+            type="text"
+            placeholder="Type a message..."
+            maxlength="500"
+          />
+          <button id="send-btn">Send</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="client.js"></script>
+  </body>
+</html>
