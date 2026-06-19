@@ -254,6 +254,10 @@ This project is licensed under the MIT License.
 
 ---
 
-## ❤️ Built With
+### 👨‍💻 Author
 
-Built using Node.js, Express, and Socket.io to demonstrate modern real-time web application development.
+**Keonho Wang**
+
+Software Engineering Student passionate about building practical tools that improve productivity and user experience.
+
+---
